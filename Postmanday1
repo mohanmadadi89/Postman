@@ -1,1 +1,270 @@
 
+{
+	"info": {
+		"_postman_id": "93b1c7da-2dcc-44f3-9f9a-2b85f2a81f35",
+		"name": "SAMPLEpOSTMAN COLLECTION",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET REQUESTS",
+			"item": [
+				{
+					"name": "GET",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "caae1949-a411-4e48-9ff9-e5a4c4d6e5e9",
+								"exec": [
+									"pm.test(\"status code is 200\", function()",
+									"{",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"console.log(\"test fail\");",
+									"",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Janet\");",
+									"});",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Ccode\": \"c64160\",\n    \"name\": \"mohan\",\n    \"lastname\": \"madadi\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/users/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Ccode\": \"c64160\",\n    \"name\": \"mohan\",\n    \"lastname\": \"madadi\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/users/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"2"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 19 Apr 2019 13:39:13 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "103"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"67-Oc3IQK+9ABOFziYvzidXVf1+QlA\""
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "4c9f48859ad7c54a-ORD"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Ccode\": \"c64160\",\n    \"name\": \"mohan\",\n    \"lastname\": \"madadi\",\n    \"id\": \"987\",\n    \"createdAt\": \"2019-04-19T13:44:09.378Z\"\n}"
+						},
+						{
+							"name": "GET",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Ccode\": \"c64160\",\n    \"name\": \"mohan\",\n    \"lastname\": \"madadi\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/users/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"2"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 19 Apr 2019 13:21:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "103"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"67-9mokkPJFw+OdR10iGVaGtc4Igo8\""
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "4c9f2f14bd44c54a-ORD"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Ccode\": \"c64160\",\n    \"name\": \"mohan\",\n    \"lastname\": \"madadi\",\n    \"id\": \"866\",\n    \"createdAt\": \"2019-04-19T13:26:47.314Z\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "Moh@n2019",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "c64160",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "9bfd6690-a88e-42b2-9a70-d1617540b97d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "b31ccf07-20a0-43ca-bb3e-1e1b3da0eabc",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "733d63af-0b45-4bf0-82cb-c105eb9ec5e6",
+			"key": "url",
+			"value": "https://reqres.in",
+			"type": "string"
+		}
+	]
+}
